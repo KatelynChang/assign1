@@ -51,7 +51,7 @@ void draw() {
   xBg2 =(xBg1+640-1)%1280;
   image(bg1,xBg1,0);
   image(bg2,xBg2,0);
-  xBg3 =(xBg2+640-1);
+  xBg3 =(xBg2+640-1)%1280;
   image(bg1,xBg3,0);
 
   
