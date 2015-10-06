@@ -7,7 +7,7 @@ PImage enemyImg;
 PImage bg1;
 PImage bg2;
 
-int x,y,hplong,xE,xBg1,xBg2;
+int x,y,hplong,xE,xBg1,xBg2,xBg3;
 
 
 void setup () {
@@ -23,7 +23,7 @@ void setup () {
   xE = 0;
   xBg1 = 0;
   xBg2 = 0;
-  
+  xBg3 = 0;
   
   // fighter 
   fighterImg = loadImage("img/fighter.png");
@@ -40,6 +40,7 @@ void setup () {
   // background
   bg1 = loadImage("img/bg1.png");
   bg2 = loadImage("img/bg2.png");
+
 }
 
 void draw() {
@@ -47,12 +48,14 @@ void draw() {
   
   // background
   xBg1 =(xBg1-1)%1280;
-  image(bg1,xBg1,0);
   xBg2 =(xBg1+640-1)%1280;
+  image(bg1,xBg1,0);
   image(bg2,xBg2,0);
-
+  xBg3 =(xBg2+640-1);
+  image(bg1,xBg3,0);
 
   
+
   // fighter
   image(fighterImg,580,240);
   
